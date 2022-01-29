@@ -22,14 +22,7 @@ public @interface LogRecordAnnotation {
      *
      * @return
      */
-    OperateCategoryEnum category() default OperateCategoryEnum.UNKNOW;
-
-    /**
-     * 和category含义相同，代表操作类型，优先级高于category，方便客户端自定义扩展
-     *
-     * @return
-     */
-    String categoryStr() default "";
+    OperateCategoryEnum category();
 
     /**
      * 操作业务对象唯一标识
@@ -37,6 +30,13 @@ public @interface LogRecordAnnotation {
      * @return
      */
     String bizId() default "";
+
+    /**
+     * 日志记录业务对象，需要在业务对象上有 LogRecordBizBean 注解
+     *
+     * @return
+     */
+    Class<?> bizBeanClass() default Void.class;
 
     /**
      * 操作详情模版内容

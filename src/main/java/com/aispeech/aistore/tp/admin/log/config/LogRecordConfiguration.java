@@ -19,7 +19,7 @@ public class LogRecordConfiguration {
     }
 
     @Bean
-    @ConditionalOnMissingBean
+    @ConditionalOnMissingBean(IOperateLogService.class)
     IOperateLogService operateLogService() {
         return new DefaultOperateLogService();
     }

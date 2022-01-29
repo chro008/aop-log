@@ -15,13 +15,18 @@ public enum OperateCategoryEnum {
     MODIFY("修改"),
     PUBLISH("发布"),
     LOGIN("登录"),
-    EXPORT("导出"),
+    BATCH_EXPORT("批量导出"),
+    ALL_EXPORT("全部导出"),
+    DOWNLOAD("下载"),
     IMPORT("导入"),
-    DISTRIBUTE("复核分配"),
+    UPLOAD("上传"),
+    DISTRIBUTE("分配"),
+    CANCEL_DISTRIBUTE("取消分配"),
+    REFUSE("拒绝"),
+    SUBMIT("提交"),
     REFRESH("刷新结果"),
     REVIEW("人工复核"),
-    EXAMINE("审核"),
-    UNKNOW("未知");
+    EXAMINE("审核");
 
     private String name;
 
